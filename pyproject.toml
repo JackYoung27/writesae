@@ -1,0 +1,20 @@
+[project]
+name = "matrix-sae"
+version = "0.1.0"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Jack Young" }]
+dependencies = ["torch>=2.0", "numpy", "tqdm"]
+
+[project.optional-dependencies]
+logging = ["wandb"]
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["core"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
